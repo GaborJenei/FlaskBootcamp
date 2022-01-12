@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form method="get">
+    <h3>Do you already own a dog?</h3>
+    <!--    Radio buttons are connected because they are sharing the same name -->
+    <label for="yes">Yes:</label>
+    <input id="yes" type="radio" name="dog_choice" value="yes">
+    <label for="no">No:</label>
+    <input id="no" type="radio" name="dog_choice" value="no">
+
+
+    <h3>Do you already own a dog?</h3>
+    <!--    Radio buttons are connected because they are sharing the same name -->
+    <label for="yes2">Yes:</label>
+    <input id="yes2" type="radio" name="dog_choice2" value="yes">
+    <label for="no2">No:</label>
+    <input id="no2" type="radio" name="dog_choice3" value="no">
+
+<!--    Drop down menus -->
+    <h3>How clean is your house?</h3>
+    <select name="stars">
+        <option value="Great">3</option>
+        <option value="Good">2</option>
+        <option value="Bad">1</option>
+    </select>
+
+<!--    Text area -->
+    <h3>Any other comments?</h3>
+    <textarea name="name" rows="8" cols="80"></textarea>
+
+    <input type="submit" value="Submit Feedback" name="">
+  </form>
+
+</body>
+</html>
