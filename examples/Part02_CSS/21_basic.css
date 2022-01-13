@@ -1,0 +1,25 @@
+/* You can use background for the whole body
+/* It can be an url to a picture
+/* body{
+    background: url(https://images.pexels.com/photos/9154049/pexels-photo-9154049.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-repeat: no-repeat;
+} */
+
+div{
+    background: blue;
+    border: orange;
+    border-width: thick; /* can use px or thick/medium etc */
+    border-style: solid; /* dotted etc */
+
+    /* Shorthand for all the above border styling */
+    border: red 10px dashed;
+}
+
+p{
+    color: yellow
+}
+
+span{
+    background: yellow;
+    color: black;
+}
