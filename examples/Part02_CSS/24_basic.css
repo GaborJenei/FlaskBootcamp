@@ -1,0 +1,12 @@
+h1{
+    /* font-family: calibri; /* cursive, monospace*/
+    font-family: 'Luxurious Roman', cursive;
+}
+
+p{
+    font-family: 'Luxurious Roman', cursive;
+    font-size:20px;
+    font-weight:bold;
+    font-style:italic;
+    text-align:center;
+}
