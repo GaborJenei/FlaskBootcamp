@@ -12,5 +12,11 @@ def info():
     return '<h2>Puppies are cute</h2>'
 
 
+# This is a dynamic route
+@app.route('/puppy/<name>')
+def puppy(name):
+    return "<h1>Upper case: {}.</h1>".format(name.upper())
+
+
 if __name__ == '__main__':
     app.run()
