@@ -5,8 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Welcome to the Site</h1>
-    <h2>here's a pic of a puppy</h2>
-    <img src="../static/puppy_pic.jpg", height="260">
+    <!-- in the double {} we receive the variable sent from python   -->
+    <h1>Welcome to the Site {{name}}!</h1>
+
+    <!-- We can index   -->
+    <h1>{{letters[0:3]}}</h1>
+
+    <h1>{{pup_dict['pup_name']}}</h1>
 </body>
 </html>
