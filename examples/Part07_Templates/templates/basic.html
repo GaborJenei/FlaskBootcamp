@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+
+    {% if user_logged_in %}
+        <p>Welcome back, you are logged in now.</p>
+    {% elif other_condition %}
+        <p>Use case 2</p>
+    {% else %}
+        <p>Please log in!</p>
+    {% endif %}
     <!-- in the double {} we receive the variable sent from python   -->
     <h1>Welcome to the Site {{name}}!</h1>
 
@@ -12,5 +20,25 @@
     <h1>{{letters[0:3]}}</h1>
 
     <h1>{{pup_dict['pup_name']}}</h1>
+
+    <h1>{{my_list}}</h1>
+
+    <ul>
+        {% for item in my_list %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for pup in puppies %}
+        <li>{{pup}}</li>
+        {% endfor %}
+    </ul>
+
+    {% if 'Rufus' in puppies %}
+        <p>Found you Rufus!</p>
+    {% else %}
+        <p>Hmm.. Rufus is not in this list</p>
+    {% endif %}
 </body>
 </html>
