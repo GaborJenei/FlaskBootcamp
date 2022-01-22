@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Welcome to user name check site</h1>
+        <p>Let's see if your user name is secure</p>
+        <p>Insert your user name into the form below</p>
+        <ul>
+            <li>Must have upper case somewhere</li>
+            <li>Must have lower case somewhere</li>
+            <li>Must have number at the end</li>
+        </ul>
+        <form action="{{url_for('report')}}">
+            <label for="user">User Name</label>
+            <input type="text" name="user_name" id="user">
+            <input type="submit" name="Submit">
+        </form>
+<!--        <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
+    </div>
+</div>
+
+{% endblock %}
+

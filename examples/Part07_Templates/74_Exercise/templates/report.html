@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h3 class="display-5 fw-bold">Let's see how you've done</h3>
+
+        <!--  Generale outcome      -->
+        <p><strong>{{user_name}},</strong> {{message}}</p>
+        <br>
+        <!--  Itemised Issue Message -->
+        {% for item in issue_list %}
+            <li>{{item}}</li>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
