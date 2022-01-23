@@ -6,5 +6,23 @@
 </head>
 <body>
 
+    <h1>Welcome to the puppy survey</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{form.breed.label}}{{form.breed}}
+        <br>
+        {{form.neutered.label}}{{form.neutered}}
+        <br>
+        {{form.food_choice.label}}{{form.food_choice(class="form-check-input")}}
+        <br>
+        {{form.mood.label}}{{form.mood}}
+        <br>
+        Any other feedback
+        <br>
+        {{form.feedback}}
+        <br>
+        {{form.submit(class="btn btn-primary")}}
+    </form>
+
 </body>
 </html>

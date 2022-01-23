@@ -25,7 +25,7 @@ class InfoForm(FlaskForm):
     submit = SubmitField('Submit this')
 
 
-@app.route('/', method=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def index():
 
     form = InfoForm()
@@ -44,9 +44,9 @@ def index():
     return render_template('index.html', form=form)
 
 
-@app.route('/thankyou', method=['GET'])
+@app.route('/thankyou')
 def thankyou():
-    render_template('thankyou.html')
+    return render_template('thankyou.html')
 
 
 if __name__ == '__main__':
