@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<p>
+    {% if breed %}
+    The breed you entered is {{breed}}
+    Update it in the form below:
+
+    {% else %}
+    Please enter a breed:
+    {% endif %}
+</p>
+
+<form method="POST">
+    <!--  objects coming from flask form -->
+    {{ form.hidden_tag() }}
+    {{ form.breed.label}}{{form.breed }}
+    {{ form.submit() }}
+
+</form>
+
+</body>
+</html>
