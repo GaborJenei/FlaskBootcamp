@@ -15,7 +15,7 @@ print(frank.id)
 
 # add all item from the list
 db.session.add_all([sam, frank])
-
+db.session.commit()
 # alternatively add one: db.session.add(sam)
 
 print(sam.id)
