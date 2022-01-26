@@ -26,7 +26,7 @@ class Puppy(db.Model):
 
     # One -> One
     # One pup to pne owner; uselist=False makes it 1:1 default uselist=True allowing a list
-    owner = db.relationship('Owner', backref='puppy', lazy='dynamic', uselist=False)
+    owner = db.relationship('Owner', backref='puppy', uselist=False)
 
     def __init__(self, name):
         self.name = name
@@ -40,7 +40,7 @@ class Puppy(db.Model):
     def report_toys(self):
         print(f"Here are my toys:")
         for toy in self.toys:
-            print(toy.item.name)
+            print(toy.item_name)
 
 
 class Toy(db.Model):
