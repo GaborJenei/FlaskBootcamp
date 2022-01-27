@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = 'my_secret_key'
 # SQL Database
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite///:' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -30,7 +30,7 @@ class Puppy(db.Model):
         self.name = name
 
     def __repr__(self):
-        return f"Puppy name: {self.name}"
+        return f"Puppy name: {self.name} ({self.id})"
 
 
 # View Functions
@@ -39,7 +39,7 @@ def index():
     return render_template('home.html')
 
 
-@app.route('/add', methods=['GET, POST'])
+@app.route('/add', methods=['GET', 'POST'])
 def add_pup():
 
     form = AddForm()
@@ -66,7 +66,7 @@ def list_pup():
 @app.route('/delete', methods=['GET', 'POST'])
 def del_pup():
 
-    form = DelForm
+    form = DelForm()
 
     if form.validate_on_submit():
 
