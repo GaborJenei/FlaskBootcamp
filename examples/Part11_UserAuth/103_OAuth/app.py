@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'mysecret'
 
+# Todo include details from google
 blueprint = make_google_blueprint(client_id='',
                                   client_secret='',
                                   offline=True,
@@ -21,7 +22,7 @@ app.register_blueprint(blueprint, url_prefix='/login')
 
 @app.route('/')
 def index():
-    render_template('home.html')
+    return render_template('home.html')
 
 
 @app.route('/welcome')
@@ -47,4 +48,5 @@ def login():
     return render_template('welcome.html', email=email)
 
 
-
+if __name__ == '__main__':
+    app.run()
