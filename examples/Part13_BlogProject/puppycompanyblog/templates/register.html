@@ -1,0 +1,22 @@
+{% extends "base.html" %}}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+
+        <form method="POST">
+            <div class="form-group">
+            {{form.hidden_tag()}}
+            {{form.email.label}}{{form.email(class="form-control")}}<br>
+            {{form.username.label}}{{form.username(class="form-control")}}<br>
+            {{form.password.label}}{{form.password(class="form-control")}}<br>
+            {{form.pass_confirm.label}}{{form.pass_confirm(class="form-control")}}<br>
+            </div>
+            {{form.submit(class="btn btn-primary")}}
+
+        </form>
+
+        <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, atque cumque dignissimos enim itaque iure libero magni mollitia, nisi nulla quaerat unde veritatis vero voluptatem?</p>
+    </div>
+</div>
+
+{% endblock %}
