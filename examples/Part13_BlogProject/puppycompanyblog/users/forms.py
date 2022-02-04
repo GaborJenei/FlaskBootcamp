@@ -8,7 +8,7 @@ from flask_login import current_user
 from puppycompanyblog.models import User
 
 
-class Login(FlaskForm):
+class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Login')
