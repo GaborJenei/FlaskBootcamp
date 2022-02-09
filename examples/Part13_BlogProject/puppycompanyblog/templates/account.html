@@ -1,0 +1,28 @@
+{% extends "base.html" %}}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5" align="center">
+        <h1>Welcome to the page for {{current_user.username}}</h1>
+        <img src="{{url_for('static', filename='profile_pics/'+current_user.profile_image)}}" align="center">
+        <br>
+        <form method="POST">
+            {{form.hidden_tag()}}
+            <div class="form-group">
+                {{form.username.label(class="form-group")}}
+                {{form.username(class="form-control")}}<br>
+            <div class="form-group">
+                {{form.email.label(class="form-group")}}
+                {{form.email(class="form-control")}}<br>
+            <div class="form-group">
+                {{form.picture.label(class="form-group")}}
+                {{form.picture(class="form-control")}}<br>
+            </div>
+            {{form.submit(class="btn btn-primary")}}
+
+        </form>
+
+        <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, atque cumque dignissimos enim itaque iure libero magni mollitia, nisi nulla quaerat unde veritatis vero voluptatem?</p>
+    </div>
+</div>
+
+{% endblock %}
