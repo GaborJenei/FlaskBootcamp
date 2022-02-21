@@ -1,7 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
-
-from models import User, BlogPost
 from puppycompanyblog import db
 from puppycompanyblog.models import User, BlogPost
 from puppycompanyblog.users.forms import RegistrationForm, LoginForm, UpdateUserForm
@@ -86,7 +84,7 @@ def account():
         form.email.data = current_user.email
 
     profile_image = url_for('static',
-                            filename='profile_pics/' + current_user.profile_pic)
+                            filename='profile_pics/' + current_user.profile_image)
     return render_template('account.html', profile_image=profile_image, form=form)
 
 
