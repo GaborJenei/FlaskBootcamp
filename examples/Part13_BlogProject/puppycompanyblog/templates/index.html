@@ -1,4 +1,4 @@
-{% extends "base.html" %}}
+{% extends "base.html" %}
 {% block content %}
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
@@ -10,10 +10,10 @@
 
         <div class="card">
             <div class="card-body">
-                <h2> <a class="card-title" href="{{url_for('blogposts.blogposts, blog_post_id=post.id)}}">{{post.title}} </a></h2>
-                <a href="{{url_for('users.user_posts, username=post.author.user.name)}}">Written by: {{post.author.name}}</a>
+                <h2> <a class="card-title" href="{{url_for('blog_posts.blog_post', blog_post_id=post.id)}}">{{post.title}} </a></h2>
+                <p>Written by: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a></p>
                 <p>Published on: {{post.date.strftime('%Y-%m-%d')}}</p>
-                <a class="btn btn-primary" href="{{url_for('blogposts.blogposts, blog_post_id=post.id)}}">Read Post</a>
+                <a class="btn btn-primary" href="{{url_for('blog_posts.blog_post', blog_post_id=post.id)}}">Read Post</a>
 
             </div>
 
