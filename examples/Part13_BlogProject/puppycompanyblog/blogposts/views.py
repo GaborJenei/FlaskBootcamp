@@ -44,7 +44,7 @@ def blog_post(blog_post_id):
 # Update post
 @blog_post.route('/<int:blog_post_id>/update', methods=['GET','POST'])
 @login_required
-def update_post(blog_post_id):
+def update(blog_post_id):
 
     # make sure you only can edit your own posts
     blog_post = BlogPost.query.get_or_404(blog_post_id)
