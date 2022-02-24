@@ -3,3 +3,8 @@
 *.jpg
 *.db
 *.sqlite
+/examples/Part13_BlogProject/migrations/versions/813e50be5b28_first_migration.py
+/examples/Part13_BlogProject/migrations/alembic.ini
+/examples/Part13_BlogProject/migrations/env.py
+/examples/Part13_BlogProject/migrations/README
+/examples/Part13_BlogProject/migrations/script.py.mako
